@@ -2,6 +2,24 @@ package Step03;
 
 import java.util.*;
 
+/* 깊이 우선 탐색(DFS) : 그래프에서 깊은 부분을 우선적으로 탐색
+ * 스택 자료 구조(혹은 재귀함수) 사용
+ * 
+ * (방문 기준: 번호가 낮은 인접 노드부터)
+ * 
+ * 		 1---2
+ * 		/ \    \
+ * 		3  \    7
+ * 		|\  \ / |
+ * 		4-5  8  6
+ * 
+ *	탐색 순서: 1 - 2 - 7 - 6 - 8 - 3 - 4 - 5
+ *
+ *			가장 깊은 곳 먼저 이동				다음으로 깊은 곳
+ *			1 - 2 - 7 - 6		8 		3 - 4 - 5
+ * */
+
+
 public class DFS_Ex {
 	public static boolean[] visited = new boolean[9];
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();

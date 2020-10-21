@@ -2,6 +2,25 @@ package Step03;
 
 import java.util.*;
 
+
+/* 
+ * 너비 우선 탐색(BFS) : 그래프에서 가까운 노드부터 우선적으로 탐색
+ * 큐 자료구조 사용
+ * 
+ * (방문 기준: 번호가 낮은 인접 노드부터)
+ * 
+ * 		 1---2
+ * 		/ \    \
+ * 		3  \    7
+ * 		|\  \ / |
+ * 		4-5  8  6
+ * 
+ *	탐색 순서: 1 - 2 - 3 - 8 - 7 - 4 - 5 - 6
+ *
+ * 깊이:		0	1			2				3	
+ *			1	2 - 3 - 8	7 - 4 - 5		6
+ * */
+
 public class BFS_Ex {
 	public static boolean[] visited = new boolean[9];
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
