@@ -1,6 +1,4 @@
-# 1. 코딩테스트 첫걸음
-
-# 2. 구현 & 그리디 유형
+# 1. 구현 & 그리디 유형
 ## (1) 구현 - 시뮬레이션, 완전 탐색과 유사
   ### 1) 상하좌우 ([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step02_Implementaion/UpDownLeftRight.java))
   **문제**  
@@ -50,25 +48,61 @@
   int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
   int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
   ```
-  
-  ### 4) [게임 개발](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step02_Implementaion/Game.java)
 ## (2) 그리디
-# 3. DFS & BFS
-## (1) [스택](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/StackEx.java)
-## (2) [큐](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/QueueEx.java)
-## (3)[인접행렬](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/AdjacencyMatrixEx.java)
+# 2. DFS & BFS
+## (1) 스택([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/StackEx.java))
+## (2) 큐([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/QueueEx.java))
+## (3) 인접행렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/AdjacencyMatrixEx.java))
 ## (4) 재귀함수
-  ### 1) [Ex1 - 종료 조건 X (무한)](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/RecursiveFunctionEx1.java)
-  ### 2) [Ex2 - 종료 조건 O](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/RecursiveFunctionEx2.java)
-## (5)[팩토리얼](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/FactorialEx.java)
-## (6) DFS(깊이 우선 탐색) / 스택 또는 재귀함수 사용
-  ### 1) [Ex](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/DFS_Ex.java)
-  ### 2) [음료수](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/DFS_Drink.java)
+  ### 1) Ex1 - 종료 조건 X (무한)([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/RecursiveFunctionEx1.java))
+  ### 2) Ex2 - 종료 조건 O ([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/RecursiveFunctionEx2.java))
+## (5) 팩토리얼[코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/FactorialEx.java)
+## (6) DFS(깊이 우선 탐색) / 스택 또는 재귀 함수 사용
+  ### 1) Ex([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/DFS_Ex.java))
+  
+  **Point. 상, 하, 좌, 우의 위치들도 모두 재귀적으로 호출**
+  ```java
+  // 현재 노드와 연결된 다른 노드를 재귀적으로 방문
+        for (int i = 0; i < graph.get(x).size(); i++) {
+            int y = graph.get(x).get(i);
+            if (!visited[y]) dfs(y);
+        }
+  ```
+   
+  ### 2) 음료수 얼려먹기([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/DFS_Drink.java)) - 재귀 함수 사용
+  
+  **Point. 상, 하, 좌, 우의 위치들도 모두 재귀적으로 호출**
+  ```java
+  dfs(x - 1, y);
+  dfs(x, y - 1);
+  dfs(x + 1, y);
+  dfs(x, y + 1);
+  ```
+  
 ## (7) BFS(너비 우선 탐색) / 큐 사용
-  ### 1) [Ex](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/BFS_Ex.java)
-  ### 2) [미로탈출](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/BFS_EscapeTheMaze.java)
-# 4. 정렬 알고리즘
-## (1) [선택 정렬](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/SelectionSort.java)
-## (2) [삽입 정렬](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/InsertSort.java)
-## (3) [퀵 정렬](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/QuickSort.java)
-#
+  ### 1) Ex([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/BFS_Ex.java))
+  
+  **Point. 연결된, 아직 방문하지 않은 원소들을 방문, 큐 삽입**
+  ```java
+   // 큐가 빌 때까지 반복
+  while(!q.isEmpty()) {
+      // 큐에서 하나의 원소를 뽑아 출력
+      int x = q.poll();
+      System.out.print(x + " ");
+      // 해당 원소와 연결된, 아직 방문하지 않은 원소들을 큐에 삽입
+      for(int i = 0; i < graph.get(x).size(); i++) {
+          int y = graph.get(x).get(i);
+          if(!visited[y]) {
+              q.offer(y);
+              visited[y] = true;
+          }
+      } // end of for
+   }
+   ```
+  
+  ### 2) 미로탈출([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/BFS_EscapeTheMaze.java))
+# 3. 정렬 알고리즘
+## (1) 선택 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/SelectionSort.java))
+## (2) 삽입 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/InsertSort.java))
+## (3) 퀵 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/QuickSort.java))
+

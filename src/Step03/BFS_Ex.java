@@ -31,6 +31,8 @@ public class BFS_Ex {
         q.offer(start);
         // 현재 노드를 방문 처리
         visited[start] = true;
+        
+        // 이 반복문을 계속 돌면서 출력함
         // 큐가 빌 때까지 반복
         while(!q.isEmpty()) {
             // 큐에서 하나의 원소를 뽑아 출력
@@ -43,7 +45,7 @@ public class BFS_Ex {
                     q.offer(y);
                     visited[y] = true;
                 }
-            }
+            } // end of for
         }
     }
 
