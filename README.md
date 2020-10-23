@@ -4,7 +4,7 @@
   **문제**  
   여행가 A는 N x N 크기의 정사각형 공간 위에 서 있습니다.  
   가장 왼쪽 위 좌표는 (1,1)이며, 가장 오른쪽 아래 좌표는 (N,N)에 해당합니다.  
-  여행가는 상(U), 하(D), 좌(L), 우(R) 방향으로 이동할 수 있으며, 시작 좌표는 항상 (1,1)입니다. 
+  여행가는 상(U), 하(D), 좌(L), 우(R) 방향으로 이동할 수 있으며, 시작 좌표는 항상 (1,1) 
   
   **이때, N x N 크기의 정사각형 공간을 벗어나는 움직임은 무시됩니다.**
   ```java
@@ -49,6 +49,41 @@
   int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
   ```
 ## (2) 그리디
+ ### 1) 거스름 돈([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step02_Greedy/Change.java))
+ **문제**    
+ 카운터에는 거스름돈으로 사용할 500원, 100원, 50원, 10원짜리 동전이 무한히 존재한다고 가정합니다.  
+ 손님에게 거슬러 주어야 할 돈이 N원일 때 거슬러 주어야 할 동전의 최소 개수를 구하세요.  
+ 
+ **Point. 가장 큰 화폐 단위부터**  
+ ```java
+  int[] coinTypes = {500, 100, 50, 10};
+  // 큰 화폐부터 차근 차근
+  for (int i = 0; i < 4; i++) {
+      int coin = coinTypes[i];
+      cnt += n / coin;
+      n %= coin; // 몫을 다시 n값으로
+  }
+ ```
+ ### 2) 곱셈과 덧셈([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step02_Greedy/MultiplicationOrAddition.java))
+ **문제**  
+ 각 자리가 숫자로만 이루어진 문자열이 주어졌을 때,  
+ 왼쪽부터 오른쪽으로 하나씩 모든 숫자를 확인하며  
+ 숫자 사이에 'x' 또는 '+' 연산자를 넣어  
+ 결과적으로 만들어질 수 있는 가장 큰 수를 구하는 프로그램을 작성하시오.
+
+ **단, +보다 x를 먼저 계산하는 일반적인 방식과 달리, 모든 연산은 왼쪽부터 순서대로 이루어진다고 가정합니다.**  
+ 
+ **Point. 0 또는 1인 경우에는 덧셈을**  
+ ```java
+ // 첫번째 숫자인 result도 0 또는 1인 경우를 놓치면 안된다.
+ if (num<=1||result<=1) {
+    result += num;
+  }
+  else {
+    result *= num;
+  }
+ ```
+ 
 # 2. DFS & BFS
 ## (1) 스택([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/StackEx.java))
 ## (2) 큐([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/QueueEx.java))

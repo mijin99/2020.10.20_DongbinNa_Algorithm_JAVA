@@ -17,7 +17,7 @@ public class MultiplicationOrAddition {
 		for (int i = 1; i < str.length(); i++) { // 인덱스는 0이 아닌 1부터
 			// 두 수 중에서 하나라도 0 혹은 1인 경우, 덧셈
 			int num = str.charAt(i) - '0';
-			if (num<=1||result<=1) { // 첫번째 숫자인 result도 0과 1인 경우를 놓치면 안된다.
+			if (num<=1||result<=1) { // 첫번째 숫자인 result도 0 또는 1인 경우를 놓치면 안된다.
 				result += num;
 			}
 			else {
