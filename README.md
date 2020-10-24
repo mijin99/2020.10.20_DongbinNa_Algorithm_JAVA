@@ -1,5 +1,7 @@
 # 1. 구현 & 그리디 유형
 ## (1) 구현 - 시뮬레이션, 완전 탐색과 유사
+풀이를 떠올리기는 쉽지만 소스코드로 옮기기 어려운 문제
+
   ### 1) 상하좌우 ([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step02_Implementaion/UpDownLeftRight.java))
   **문제**  
   여행가 A는 N x N 크기의 정사각형 공간 위에 서 있습니다.  
@@ -48,7 +50,9 @@
   int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
   int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
   ```
-## (2) 그리디
+## (2) 그리디  
+현재 상황에서 지금 당장 좋은 것만 고르는 방법
+
  ### 1) 거스름 돈([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step02_Greedy/Change.java))
  **문제**    
  카운터에는 거스름돈으로 사용할 500원, 100원, 50원, 10원짜리 동전이 무한히 존재한다고 가정합니다.  
@@ -85,6 +89,8 @@
  ```
  
 # 2. DFS & BFS
+그래프 탐색 
+
 ## (1) 스택([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/StackEx.java))
 ## (2) 큐([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/QueueEx.java))
 ## (3) 인접행렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/AdjacencyMatrixEx.java))
