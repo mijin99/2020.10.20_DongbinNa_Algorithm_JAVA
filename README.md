@@ -146,4 +146,8 @@
 ## (1) 선택 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/SelectionSort.java))
 ## (2) 삽입 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/InsertSort.java))
 ## (3) 퀵 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/QuickSort.java))
+## (4) 계수 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04_Sort/CountingSort.java))
+## (5) 표준 라이브러리([오름차순 코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04_Sort/StandardLibrary.java))([내림차순 코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04_Sort/StandardLibrary_ReverseOrder.java))
+## (6) 두 배열의 원소 값 바꾸기([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04_Sort/Replace_two_array_elements.java))
+
 
