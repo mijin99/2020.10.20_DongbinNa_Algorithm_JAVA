@@ -142,6 +142,15 @@
    ```
   
   ### 2) 미로탈출([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step03/BFS_EscapeTheMaze.java))
+  
+  **Point. 해당 노드를 처음 방문하는 경우에만 최단 거리 기록**
+  ```java
+  if (graph[nx][ny] == 1) {
+      graph[nx][ny] = graph[x][y] + 1;
+      q.offer(new Node(nx, ny));
+  }
+   ```
+  
 # 3. 정렬 알고리즘
 ## (1) 선택 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/SelectionSort.java))
 ## (2) 삽입 정렬([코드](https://github.com/BYUNSUJUNG/2020.10.20_DongbinNa_Algorithm_JAVA/blob/master/src/Step04/InsertSort.java))
